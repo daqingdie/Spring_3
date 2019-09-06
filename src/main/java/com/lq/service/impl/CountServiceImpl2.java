@@ -1,14 +1,10 @@
 package com.lq.service.impl;
 
-import com.lq.dao.CountDao;
-import com.lq.dao.impl.CountDaoImpl;
 import com.lq.service.CountService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Date;
 
-public class CountServiceImpl implements CountService {
+public class CountServiceImpl2 implements CountService {
 
 
 
@@ -21,11 +17,7 @@ public class CountServiceImpl implements CountService {
         System.out.println(name+"..."+age+"..."+birthday);
     }
 
-    public CountServiceImpl(String name, int age, Date birthday) {
-        this.name = name;
-        this.age = age;
-        this.birthday = birthday;
-    }
+
 
     public String getName() {
         return name;

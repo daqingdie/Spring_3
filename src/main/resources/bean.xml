@@ -4,5 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
+    <bean id="countService" class="com.lq.service.impl.CountServiceImpl" >
+        <constructor-arg name="name" value="test"></constructor-arg>
+        <constructor-arg name="age" value="17"></constructor-arg>
+        <constructor-arg name="birthday" ref="nowTime"></constructor-arg>
+    </bean>
+    <bean id="nowTime" class="java.util.Date"></bean>
+    <bean id="countService2" class="com.lq.service.impl.CountServiceImpl2" >
+        <property name="name" value="托尔斯泰"></property>
+        <property name="age" value="10"/>
+        <property name="birthday" ref="nowTime"/>
+    </bean>
 </beans>
